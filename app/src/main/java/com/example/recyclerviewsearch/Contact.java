@@ -5,18 +5,18 @@ public class Contact {
     String image;
     String phone;
 
-    public Contact(){
+    public Contact() {
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getImage(){
+    public String getImage() {
         return image;
     }
 
-    public String getPhone(){
+    public String getPhone() {
         return phone;
     }
 }

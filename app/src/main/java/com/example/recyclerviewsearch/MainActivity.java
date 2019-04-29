@@ -32,12 +32,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity  implements  ContactsAdapter.ContactsAdapterListener {
     private static final String TAG = MainActivity.class.getSimpleName();
-    private RecyclerView recyclerView;
     private List<Contact> contactList;
     private ContactsAdapter mAdapter;
     private SearchView searchView;
 
-    private static final String URL = "http://puntosingular.mx/json/contacts.json";
+    private static final String URL = "https://api.androidhive.info/json/contacts.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +45,8 @@ public class MainActivity extends AppCompatActivity  implements  ContactsAdapter
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.toolbar_title);
 
-        recyclerView = findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
         contactList = new ArrayList<>();
         mAdapter = new ContactsAdapter(this, contactList, this);
 

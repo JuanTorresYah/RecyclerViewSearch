@@ -26,7 +26,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyView
         public TextView name, phone;
         public ImageView thumbnail;
 
-        public MyViewHolder(View view) {
+        public  MyViewHolder(View view) {
             super(view);
             name = view.findViewById(R.id.name);
             phone = view.findViewById(R.id.phone);
@@ -34,7 +34,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyView
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View view) {
 
                     listener.onContactSelected(contactListFiltered.get(getAdapterPosition()));
                 }
